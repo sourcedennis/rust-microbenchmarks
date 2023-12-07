@@ -1,0 +1,15 @@
+[package]
+name = "hashset-u32"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rand = "0.8"
+fxhash = "0.2"
+nohash-hasher = "0.2"
+
+[profile.release]
+lto = true
+strip = true
+panic = 'abort'
+codegen-units = 1

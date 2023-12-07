@@ -16,6 +16,7 @@ Thus, I lose the *reason* for deciding on a particular implementation. In this p
 ## Conclusions
 
 * `parse-u64s` - Parsing *textual* `u64`s is faster with [`nom`](https://docs.rs/nom/latest/nom/) than with `&str::parse()`.
+* `hashset-u32` - A `HashSet<u32>` is much faster when using [`fxhash`](https://docs.rs/fxhash/latest/fxhash/) rather than when using no hash ([`nohash-hasher`](https://docs.rs/nohash-hasher/latest/nohash_hasher/)).
 
 ## License
 
